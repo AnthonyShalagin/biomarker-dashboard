@@ -1,0 +1,48 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model BiomarkerCategory {
+  id         String      @id @default(cuid())
+  name       String      @unique
+  icon       String?
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+  biomarkers Biomarker[]
+  readings   Reading[]
+}
+
+model Biomarker {
+  id         String              @id @default(cuid())
+  name       String              @unique
+  unit       String
+  category   BiomarkerCategory   @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  categoryId String
+  normalMin  Float?
+  normalMax  Float?
+  description String?
+  createdAt  DateTime            @default(now())
+  updatedAt  DateTime            @updatedAt
+  readings   Reading[]
+}
+
+model Reading {
+  id          String            @id @default(cuid())
+  biomarker   Biomarker         @relation(fields: [biomarkerId], references: [id], onDelete: Cascade)
+  biomarkerId String
+  category    BiomarkerCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  categoryId  String
+  value       Float
+  date        DateTime
+  notes       String?
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+}
