@@ -95,7 +95,10 @@ export default function ImportPage() {
               <label className="block text-sm font-medium text-slate-900 mb-2">
                 Select CSV File
               </label>
-              <div className="border-2 border-dashed border-slate-300 rounded-lg p-8 text-center hover:border-blue-500 transition-colors">
+              <label
+                htmlFor="file-input"
+                className="block cursor-pointer border-2 border-dashed border-slate-300 rounded-lg p-8 text-center hover:border-blue-500 transition-colors"
+              >
                 <input
                   type="file"
                   accept=".csv"
@@ -103,26 +106,24 @@ export default function ImportPage() {
                   className="hidden"
                   id="file-input"
                 />
-                <label htmlFor="file-input" className="cursor-pointer">
-                  {file ? (
-                    <div>
-                      <p className="text-slate-900 font-medium">{file.name}</p>
-                      <p className="text-slate-500 text-sm">
-                        {(file.size / 1024).toFixed(2)} KB
-                      </p>
-                    </div>
-                  ) : (
-                    <div>
-                      <p className="text-slate-600">
-                        Click to select a CSV file or drag and drop
-                      </p>
-                      <p className="text-slate-500 text-sm mt-1">
-                        Maximum file size: 10MB
-                      </p>
-                    </div>
-                  )}
-                </label>
-              </div>
+                {file ? (
+                  <div>
+                    <p className="text-slate-900 font-medium">{file.name}</p>
+                    <p className="text-slate-500 text-sm">
+                      {(file.size / 1024).toFixed(2)} KB
+                    </p>
+                  </div>
+                ) : (
+                  <div>
+                    <p className="text-slate-600">
+                      Click to select a CSV file or drag and drop
+                    </p>
+                    <p className="text-slate-500 text-sm mt-1">
+                      Maximum file size: 10MB
+                    </p>
+                  </div>
+                )}
+              </label>
             </div>
 
             {message && (
