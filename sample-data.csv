@@ -1,0 +1,22 @@
+categoryName,biomarkerName,unit,value,date,normalMin,normalMax
+Cardiovascular,Total Cholesterol,mg/dL,180,2024-01-15,0,200
+Cardiovascular,Total Cholesterol,mg/dL,185,2024-01-22,0,200
+Cardiovascular,Total Cholesterol,mg/dL,175,2024-02-05,0,200
+Cardiovascular,LDL Cholesterol,mg/dL,110,2024-01-15,0,100
+Cardiovascular,LDL Cholesterol,mg/dL,105,2024-01-22,0,100
+Cardiovascular,LDL Cholesterol,mg/dL,95,2024-02-05,0,100
+Cardiovascular,HDL Cholesterol,mg/dL,45,2024-01-15,40,60
+Cardiovascular,HDL Cholesterol,mg/dL,48,2024-01-22,40,60
+Cardiovascular,HDL Cholesterol,mg/dL,52,2024-02-05,40,60
+Metabolic,Glucose,mg/dL,95,2024-01-15,70,100
+Metabolic,Glucose,mg/dL,92,2024-01-22,70,100
+Metabolic,Glucose,mg/dL,98,2024-02-05,70,100
+Metabolic,Insulin,µIU/mL,8.5,2024-01-15,2,12
+Metabolic,Insulin,µIU/mL,7.2,2024-01-22,2,12
+Metabolic,Insulin,µIU/mL,9.1,2024-02-05,2,12
+Inflammation,CRP,mg/L,1.5,2024-01-15,0,3
+Inflammation,CRP,mg/L,1.8,2024-01-22,0,3
+Inflammation,CRP,mg/L,1.2,2024-02-05,0,3
+Hormones,Testosterone,ng/dL,450,2024-01-15,264,916
+Hormones,Testosterone,ng/dL,480,2024-01-22,264,916
+Hormones,Testosterone,ng/dL,520,2024-02-05,264,916
